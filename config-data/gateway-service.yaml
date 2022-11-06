@@ -1,0 +1,38 @@
+server:
+  port: 8082
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        enabled: true
+    routes:
+      - id: microservice-empleado
+        uri: lb://microservice-empleado
+        predicates:
+          - Path=/empleado/**
+      - id: microservice-justificativo
+        uri: lb://microservice-justificativo
+        predicates:
+          - Path=/justificativo/**
+      - id: microservice-solicitud
+        uri: lb://microservice-solicitud
+        predicates:
+          - Path=/solicitud/**
+      - id: microservice-reloj
+        uri: lb://microservice-reloj
+        predicates:
+          - Path=/marcas/**
+      - id: microservice-sueldo
+        uri: lb://microservice-sueldo
+        predicates:
+          - Path=/sueldo/**                  
