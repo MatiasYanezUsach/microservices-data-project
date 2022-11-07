@@ -36,4 +36,8 @@ spring:
         - id: microservice-sueldo
           uri: lb://microservice-sueldo
           predicates:
-            - Path=/sueldo/**                  
+            - Path=/sueldo/** 
+        - id: microservice-sueldo
+          uri: lb://microservice-sueldo
+          predicates:
+            - Path=/actuator/**                      
