@@ -1,16 +1,8 @@
 server:
   port: 8080
-
-eureka:
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      default-zone: http://localhost:8761/eureka
-  instance:
-    hostname: localhost
-
 spring:
+  application:
+    name: gateway-service
   cloud:
     gateway:
       discovery:
@@ -40,4 +32,10 @@ spring:
         - id: microservice-sueldo
           uri: lb://microservice-sueldo
           predicates:
-            - Path=/actuator/**                      
+            - Path=/actuator/**  
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}                    
