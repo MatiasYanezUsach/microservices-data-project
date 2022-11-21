@@ -8,6 +8,15 @@ spring:
       discovery:
         locator:
           enabled: true
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-control-Allow-Credentials, RETAIN_UNIQUE
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowed-origin-patterns: '*'
+            allowed-methods: "*"
+            allowed-headers: "*"
+            allow-Credentials: true
       routes:
         - id: microservice-empleado
           uri: lb://microservice-empleado
