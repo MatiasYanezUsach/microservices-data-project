@@ -2,9 +2,9 @@ spring:
   application:
     name: microservice-reloj
   datasource:
-    url: jdbc:mysql://localhost:3306/marcas
-    username: root
-    password: Chile&2022
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
   jpa:
     properties:
       hibernate:
