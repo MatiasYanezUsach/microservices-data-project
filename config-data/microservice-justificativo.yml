@@ -2,9 +2,9 @@ spring:
   application:
     name: microservice-justificativo
   datasource:
-    url: ${DB_URL}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    url: jdbc:mysql://justificativos-db:3306/justificativo
+    username: root
+    password: 123456
   jpa:
     properties:
       hibernate:

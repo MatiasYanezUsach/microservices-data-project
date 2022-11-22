@@ -2,9 +2,9 @@ spring:
   application:
     name: microservice-empleado
   datasource:
-    url: ${DB_URL}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    url: jdbc:mysql://empleados-db:3306/empleado
+    username: root
+    password: Chile&2022
   jpa:
     properties:
       hibernate:
