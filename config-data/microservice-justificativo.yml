@@ -18,6 +18,12 @@ spring:
 server:
   port: 8091
   forward-headers-strategy: framework
+keycloak:
+  realm: MueblesStgo
+  auth-server-url: http://localhost:8080
+  resource: mueblesStgo-keycloak
+  public-client: true
+  bearer-only: true
 eureka:
   client:
     fetch-registry: true
