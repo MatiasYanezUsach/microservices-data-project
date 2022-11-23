@@ -2,9 +2,10 @@ spring:
   application:
     name: microservice-sueldo
   datasource:
-    url: jdbc:mysql://localhost:3306/sueldo
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql-db5:3306/bd5
     username: root
-    password: Chile&2022
+    password: 123456
   jpa:
     properties:
       hibernate:

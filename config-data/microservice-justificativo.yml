@@ -2,9 +2,10 @@ spring:
   application:
     name: microservice-justificativo
   datasource:
-    url: jdbc:mysql://localhost:3306/justificativos
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql-db2:3306/bd2
     username: root
-    password: Chile&2022
+    password: 123456
   jpa:
     properties:
       hibernate:
