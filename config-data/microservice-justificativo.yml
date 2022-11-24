@@ -3,7 +3,7 @@ spring:
     name: microservice-justificativo
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mysql-db2:3306/bd2
+    url: jdbc:mysql://mysql-db2:3307/bd2
     username: root
     password: 123456
   jpa:
@@ -25,3 +25,5 @@ eureka:
     register-with-eureka: true
     serviceUrl:
       defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
+  instance: 
+    instance: ${spring.application.name}:${spring.application.instance_id:${random.value}}
